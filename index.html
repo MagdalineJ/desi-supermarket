@@ -48,7 +48,8 @@
                   />
                   <button
                      class="input-group-text px-4 bg-success"
-                     id="search-btn"
+                     id="search-btn" 
+                     onclick="search()"
                   >
                      <i class="bi bi-search text-white fw-bold"></i>
                   </button>
@@ -90,7 +91,7 @@
                         <tr>
                            <th>Total Added-Products:</th>
                            <!-- here will be no dollar sign -->
-                           <td>$<span id="total-Products">0</span></td>
+                           <td><span id="total-Products">0</span></td>
                            <td></td>
                            <td></td>
                         </tr>
@@ -157,10 +158,17 @@
                </div>
 
                <div class="modal-body text-secondary" id="modal_body"></div>
-               <div class="p-4 d-flex">
+               <div class="p-4 d-flex ">
                   <strong class="me-2">Rating</strong>
                   <span
                      id="rating"
+                     class="text-white p-2 circle"
+                  ></span>
+               </div>
+               <div class="p-4 d-flex">
+                  <strong class="me-2">Rating Counted by:</strong>
+                  <span
+                     id="ratingCount"
                      class="text-white p-2 circle"
                   ></span>
                </div>
@@ -184,6 +192,6 @@
          crossorigin="anonymous"
       ></script>
       <!-- Custom javascript file -->
-      <script src="./js/app.js"></script>
+      <script src="./js/app2.js"></script>
    </body>
 </html>

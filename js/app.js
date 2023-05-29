@@ -20,7 +20,7 @@ const showProducts = (products) => {
 
    const allProducts = products.slice(0, 10).map((pd) => pd);
    for (const product of allProducts) {
-      const image = product.images;
+      const image = product[0].image;
       const div = document.createElement('div');
       div.classList.add('product');
       div.innerHTML = `<div class="single-product">
@@ -42,9 +42,9 @@ const showProducts = (products) => {
 
 let count = 0;
 
-const addToCart = (id, price) => {
+const addToCart = (id, value) => {
    count = count + 1;
-   updatePrice('price', value);
+   updatePrice(id, value);
 
    updateTaxAndCharge();
    document.getElementById('total-Products').innerText = count;
@@ -111,6 +111,7 @@ const updateTotal = () => {
 };
 
 // search by category
+
 document.getElementById("search-btn").addEventListener("click", function () {
    const inputField = document.getElementById("input-value").value;
    const searchedProduct = arr[0].find((p) =>
