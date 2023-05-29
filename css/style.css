@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  color:rgb(132, 132, 56)
 }
 .search-field {
   border: none;
@@ -38,12 +39,14 @@ body {
 .single-product {
   padding: 10px;
   transition: 0.6s;
+  height:570px;
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
-  border: 1px solid cyan;
+  border: 2px solid rgb(56, 155, 81);
 }
+
 .product-image {
   width: 150px;
   height: 150px;
@@ -61,8 +64,8 @@ body {
   padding-right: 30px;
 }
 .circle {
-  width: 28px;
-  height: 28px;
+  width: 45px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;

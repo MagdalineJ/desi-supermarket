@@ -1,3 +1,4 @@
+
 // fetching data
 const arr = [];
 
@@ -25,7 +26,7 @@ for (const product of products) {
     const image = product.image;
     const div = document.createElement('div');
     div.classList.add('product');
-    div.innerHTML = `<div class="single-product row-cols-3 ">
+    div.innerHTML = `<div class="single-product ">
     <div>
   <img class="product-image" src=${image}></img>
     </div>
@@ -138,21 +139,19 @@ const updateTotal = () => {
  const search =()=>{
     const inputField = document.getElementById("input-value").value;
     if(inputField!==''){ 
-      
-
         const searchedProduct = arr[0].filter((p) =>
         p.category.startsWith(`${inputField}`)
       );
     if(searchedProduct.length ===0){
     alert('product not found!')
-    }else{
+      }else{
         // console.log(searchedProduct)
         showProducts(searchedProduct);
         
     }
         // console.log(inputField)}
     }
-    else{alert(' must not b empty')}
+    else{alert('Input field must not be empty!')}
     document.getElementById("input-value").value='';
     
  }
